@@ -1,8 +1,8 @@
 import { Box, Grid, colors } from '@mui/material';
 import React, { useState } from 'react';
 import assets from "../assets";
-import SigninForm from '../components/SigninForm';
-import SignupForm from '../components/SignupForm';
+import SigninForm from '../components/SigninForm/SigninForm';
+import SignupForm from '../components/SignupForm/SignupForm';
 
 export const ScreenMode = {
   SIGN_IN: "SIGN_IN",
@@ -46,7 +46,10 @@ const SigninPage = () => {
   return (
     <>
       <Grid container sx={{ height: "100vh" }}>
-        <Grid item xs={4} sx={{ position: "relative", padding: 3 }}>
+        <Grid
+        width={{ xs: "100%", sm: "auto" }} 
+        item xs={12} sm={5} md={4} sx={{ position: "relative", padding: 3 }}
+        >
           {
             currMode === ScreenMode.SIGN_IN ? (
               <SigninForm onSwitchMode={onSwitchMode} />
@@ -65,13 +68,15 @@ const SigninPage = () => {
             transition: "all 1s ease-in-out"
           }} />
         </Grid>
-        <Grid item xs={8} sx={{
-          position: "relative",
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat"
-        }}>
+        <Grid
+          display={{ xs: "none", sm: "block" }}
+          item xs={8} sm={7} md={8} sx={{
+            position: "relative",
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat"
+          }}>
           <Box sx={{
             position: "absolute",
             top: 0,

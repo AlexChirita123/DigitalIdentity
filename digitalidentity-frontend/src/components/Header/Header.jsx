@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import classes from "./Header.module.scss";
 
-import classes from "./Navbar.scss";
-import { Link, useHistory, useNavigate } from "react-router-dom";
+// import { Link, useHistory, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
-    const history = useNavigate();
+const Header = () => {
+    // const history = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
     const [size, setSize] = useState({
         width: undefined,
@@ -38,15 +38,16 @@ const Navbar = () => {
 
     const ctaClickHandler = () => {
         menuToggleHandler();
-        history.push("/page-cta");
+        // history.push("/page-cta");
     };
 
     return (
         <header className={classes.header}>
             <div className={classes.header__content}>
-                <Link to="/" className={classes.header__content__logo}>
+                {/* <Link to="/" className={classes.header__content__logo}>
                     navbar
-                </Link>
+                </Link> */}
+                <h2 className={classes.header__content__logo}>RocketTeam</h2>
                 <nav
                     className={`${classes.header__content__nav} ${
                         menuOpen && size.width < 768 ? classes.isMenu : ""
@@ -54,19 +55,13 @@ const Navbar = () => {
                 >
                     <ul>
                         <li>
-                            <Link to="/page-one" onClick={menuToggleHandler}>
-                                PageOne
-                            </Link>
+                            <a href="/">PageOne</a>
                         </li>
                         <li>
-                            <Link to="/page-two" onClick={menuToggleHandler}>
-                                PageTwo
-                            </Link>
+                        <a href="/">PageTwo</a>
                         </li>
                         <li>
-                            <Link to="/page-three" onClick={menuToggleHandler}>
-                                PageThree
-                            </Link>
+                        <a href="/">PageThree</a>
                         </li>
                     </ul>
                     <button onClick={ctaClickHandler}>CTA Page</button>
@@ -83,4 +78,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Header;
