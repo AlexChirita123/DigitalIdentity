@@ -6,6 +6,8 @@ import { CssBaseline } from '@mui/material';
 import SigninPage from './pages/SigninPage';
 import InsertUser from "./pages/InsertUser/InsertUser";
 
+import RelevantInfo from './components/RelevantInfo/RelevantInfo';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       {/* <CssBaseline />
       <SigninPage /> */}
       <InsertUser/>
+      
     </>
   );
 }
