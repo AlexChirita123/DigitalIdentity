@@ -1,0 +1,26 @@
+body{
+    margin:0;
+    padding:0;
+}
+.button-container{
+    
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+button{
+    font-size: 30px;
+    cursor:pointer;
+    border:none;
+    background-color: rgb(48, 49, 49);
+    color:white;
+
+}
+.container{
+    padding:100px;
+    display: flex;
+    justify-content: space-around;
+}
