@@ -4,18 +4,22 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { CssBaseline } from '@mui/material';
 import SigninPage from './pages/SigninPage';
+import { Switch, Route } from "react-router-dom";
 import InsertUser from "./pages/InsertUser/InsertUser";
+import Header from './components/Header/Header';
 
 import RelevantInfo from './components/RelevantInfo/RelevantInfo';
+import ConfirmIdentity from './pages/ConfirmIdentity.jsx/ConfirmIdentity';
 
 
 function App() {
   return (
     <>
-      {/* <CssBaseline />
-      <SigninPage /> */}
-      <InsertUser/>
-      
+      {/* <Header />
+      <CssBaseline />
+      <SigninPage /> */
+      }
+      <ConfirmIdentity/>
     </>
   );
 }

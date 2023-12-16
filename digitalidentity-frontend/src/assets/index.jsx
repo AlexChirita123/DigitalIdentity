@@ -1,7 +1,7 @@
 const assets = {
     images: {
-      signinBg: require("./images/login-img.png"),
-      signupBg: require("./images/login-img2.png")
+      signinBg: require("./images/loginPage10.jpg"),
+      signupBg: require("./images/loginPage12.jpg")
     }
   };
   

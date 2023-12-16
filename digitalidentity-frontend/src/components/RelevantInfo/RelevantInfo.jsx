@@ -3,7 +3,6 @@ import "./RelevantInfo.css";
 const RelevantInfo=({name,surname,PIN,address})=>{
 
 
-
     return (
         <div className="relevant-info">
             <h4>Relevant info</h4>

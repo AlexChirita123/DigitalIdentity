@@ -1,8 +1,8 @@
 import { Button, Stack, TextField, Typography, colors } from '@mui/material';
 import React from 'react';
-import { ScreenMode } from '../pages/SigninPage';
+import { ScreenMode } from '../../pages/SigninPage';
 
-const SigninForm = ({ onSwitchMode }) => {
+const SignupForm = ({ onSwitchMode }) => {
   return (
     <Stack
       justifyContent="center"
@@ -18,22 +18,31 @@ const SigninForm = ({ onSwitchMode }) => {
       }}>
         <Stack>
           <Typography variant='h4' fontWeight={600} color={colors.grey[800]}>
-            Welcome back
-          </Typography>
-          <Typography color={colors.grey[600]}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit
-          </Typography>
+            Create an account
+          </Typography> 
         </Stack>
 
-        <Stack spacing={4}>
-          <Stack spacing={2}>
+        <Stack spacing={2}>
+          <Stack spacing={1}>
+            <Stack spacing={1}>
+              <Typography color={colors.grey[800]}>FirstName</Typography>
+              <TextField size='small'/>
+            </Stack>
+            <Stack spacing={1}>
+              <Typography color={colors.grey[800]}>LastName</Typography>
+              <TextField size='small'/>
+            </Stack>
             <Stack spacing={1}>
               <Typography color={colors.grey[800]}>Email</Typography>
-              <TextField />
+              <TextField size='small'/>
+            </Stack>
+            <Stack spacing={1}>
+              <Typography color={colors.grey[800]}>Address</Typography>
+              <TextField size='small'/>
             </Stack>
             <Stack spacing={1}>
               <Typography color={colors.grey[800]}>Password</Typography>
-              <TextField type='password' />
+              <TextField type='password' size='small'/>
             </Stack>
           </Stack>
           <Button
@@ -51,16 +60,16 @@ const SigninForm = ({ onSwitchMode }) => {
         </Stack>
 
         <Stack direction="row" spacing={2}>
-          <Typography>Don't have an account?</Typography>
+          <Typography>Already have an account?</Typography>
           <Typography
-            onClick={() => onSwitchMode(ScreenMode.SIGN_UP)}
+            onClick={() => onSwitchMode(ScreenMode.SIGN_IN)}
             fontWeight={600}
             sx={{
               cursor: "pointer",
               userSelect: "none"
             }}
           >
-            Sign up now
+            Sign in
           </Typography>
         </Stack>
       </Stack>
@@ -68,4 +77,4 @@ const SigninForm = ({ onSwitchMode }) => {
   );
 };
 
-export default SigninForm;
+export default SignupForm;
