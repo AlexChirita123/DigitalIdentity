@@ -1,6 +1,6 @@
 import { Button, Stack, TextField, Typography, colors } from '@mui/material';
 import React from 'react';
-import { ScreenMode } from '../../pages/SigninPage';
+import { ScreenMode } from '../../pages/SigninPage/SigninPage';
 
 const SigninForm = ({ onSwitchMode }) => {
   return (

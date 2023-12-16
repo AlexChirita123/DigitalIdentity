@@ -1,8 +1,8 @@
 import { Box, Grid, colors } from '@mui/material';
 import React, { useState } from 'react';
-import assets from "../assets";
-import SigninForm from '../components/SigninForm/SigninForm';
-import SignupForm from '../components/SignupForm/SignupForm';
+import assets from "../../assets";
+import SigninForm from '../../components/SigninForm/SigninForm';
+import SignupForm from '../../components/SignupForm/SignupForm';
 
 export const ScreenMode = {
   SIGN_IN: "SIGN_IN",
