@@ -6,36 +6,23 @@ const RelevantInfo = ({ name, surname, PIN, address }) => {
 
     return (
         <>
-            <div className="relevant-info">
-                <h4>Relevant info</h4>
-                <div className="flexbox-div">
-
-                    <div className="item"><label>
-                        NAME
-                        <input type="text" name="name" />
-                    </label></div>
-
-                    <div className="item">
-                        <label>
-                            SURNAME
-                            <input type="text" name="name" />
-                        </label>
-                    </div>
-
-                    <div className="item">
-                        <label>
-                            PIN
-                            <input type="text" name="name" />
-                        </label>
-                    </div>
-
-                    <div>
-                        <label className="item">
-                            ADDRESS
-                            <input type="text" name="name" />
-                        </label>
-                    </div>
-
+            <div className="box w-auto">
+                <h2>User info</h2>
+                <div className="input-group">
+                    <label htmlFor="input1">First name:</label>
+                    <input type="text" id="input1" />
+                </div>
+                <div className="input-group">
+                    <label htmlFor="input2">Last name:</label>
+                    <input type="text" id="input2" />
+                </div>
+                <div className="input-group">
+                    <label htmlFor="input3">Pin:</label>
+                    <input type="number" id="input3" />
+                </div>
+                <div className="input-group">
+                    <label htmlFor="input4">Address:</label>
+                    <input type="text" id="input4" />
                 </div>
             </div>
 

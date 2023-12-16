@@ -98,20 +98,20 @@
                 border-radius: $borderRadius;
                 font-size: 1rem;
                 font-family: inherit;
-                background: $primary;
-                color: $dark;
+                background: $lightDark;
+                color: $grey;
                 border: 1px solid transparent;
                 transition: 0.3s ease all;
 
                 &:hover {
-                    border-color: $primary;
-                    background: rgba($primary, 0.1);
-                    color: $primary;
+                    border-color: $lightDark;
+                    background: rgba($lightDark, 0.1);
+                    color: $grey;
                 }
                 &:active {
-                    border-color: $primary;
-                    background: linear-gradient(rgba($primary, 0.2), rgba($primary, 0.3));
-                    color: $primary;
+                    border-color: $lightDark;
+                    background: linear-gradient(rgba($lightDark, 0.2), rgba($lightDark, 0.3));
+                    color: $grey;
                 }
             }
 

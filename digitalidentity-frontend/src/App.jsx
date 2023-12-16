@@ -7,7 +7,8 @@ import SigninPage from './pages/SigninPage/SigninPage';
 import { Switch, Route } from "react-router-dom";
 import InsertUser from "./pages/InsertUser/InsertUser";
 import Header from './components/Header/Header';
-
+import '../src/assets/styles/index.scss'
+import ConfirmIdentity from './pages/ConfirmIdentity.jsx/ConfirmIdentity';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <CssBaseline />
       <Header />
       {/* <SigninPage /> */}
-      <InsertUser />
+      {/* <InsertUser /> */}
+      <ConfirmIdentity />
     </>
   );
 }

@@ -1,8 +1,10 @@
 import { Box, Grid, colors } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import assets from "../../assets";
 import SigninForm from '../../components/SigninForm/SigninForm';
 import SignupForm from '../../components/SignupForm/SignupForm';
+import "./SigninPage.scss";
+
 
 export const ScreenMode = {
   SIGN_IN: "SIGN_IN",
@@ -10,6 +12,16 @@ export const ScreenMode = {
 };
 
 const SigninPage = () => {
+  useEffect(() => {
+    // Add the class to the body element when the component mounts
+    document.body.classList.add('body-with-background');
+
+    // Remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove('body-with-background');
+    };
+  }, []);
+
   const [left, setLeft] = useState(0);
   const [right, setRight] = useState("unset");
   const [width, setWidth] = useState(0);
@@ -47,8 +59,8 @@ const SigninPage = () => {
     <>
       <Grid container sx={{ height: "100vh" }}>
         <Grid
-        width={{ xs: "100%", sm: "auto" }} 
-        item xs={12} sm={5} md={4} sx={{ position: "relative", padding: 3 }}
+          width={{ xs: "100%", sm: "auto" }}
+          item xs={12} sm={5} md={4} sx={{ position: "relative", padding: 3 }}
         >
           {
             currMode === ScreenMode.SIGN_IN ? (

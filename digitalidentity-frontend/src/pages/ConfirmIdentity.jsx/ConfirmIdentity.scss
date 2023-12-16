@@ -1,0 +1,14 @@
+.webcam-container {
+    height: 500px;
+    width: 1000px;
+    background-color: #1f2833;
+    text-align: center;
+    p {
+        color: #ffffff;
+    }
+    @media screen and (max-width: 1200px) {
+        width: 80vw;
+        height: 300px;
+    }
+    
+}
